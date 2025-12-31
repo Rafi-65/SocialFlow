@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <h1>Manage All Your Socials<br>From One Place</h1>
+    <p>Schedule posts, analyze performance, and grow your audience effortlessly. The ultimate tool for modern content
+        creators.</p>
+
+    <div class="cta-group">
+        <a href="{{ url_for('register') }}" class="btn-primary"
+            style="display:inline-block; width:auto; padding: 1rem 2rem;">Start for Free</a>
+        <a href="#features" class="btn-primary"
+            style="display:inline-block; width:auto; padding: 1rem 2rem; background: rgba(255,255,255,0.1);">Learn
+            More</a>
+    </div>
+
+    <div style="margin-top: 4rem; position: relative;">
+        <div class="glass-card" style="display: inline-block; max-width: 800px; width: 100%; min-height: 400px;">
+            <div
+                style="display:flex; justify-content:center; align-items:center; height:100%; color: var(--text-muted);">
+                <!-- Placeholder for a dashboard preview image -->
+                <p>Dashboard Preview could go here</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

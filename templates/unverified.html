@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="glass-card" style="text-align: center;">
+        <h2 style="margin-bottom: 1rem; color: var(--secondary);">Verification Required</h2>
+        <p style="margin-bottom: 2rem; color: var(--text-muted);">
+            We've sent a verification link to your email address. Please check your inbox (and console logs for this
+            demo) to activate your account.
+        </p>
+        <div style="padding: 1rem; background: rgba(255,255,255,0.05); border-radius: 0.5rem; margin-bottom: 2rem;">
+            <p style="font-size: 0.9rem;">Status: <span style="color: #fbbf24; font-weight: bold;">Pending
+                    Verification</span></p>
+        </div>
+
+        <a href="{{ url_for('logout') }}" class="btn-primary"
+            style="display: inline-block; width: auto; background: rgba(255,255,255,0.1);">Log Out</a>
+    </div>
+</div>
+{% endblock %}

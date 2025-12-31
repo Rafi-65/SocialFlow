@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="glass-card">
+        <h2 style="margin-bottom: 2rem; text-align: center;">
+            {% if mode == 'login' %}Welcome Back{% else %}Create Account{% endif %}
+        </h2>
+
+        <form method="POST" action="">
+            {% if mode == 'register' %}
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" required>
+            </div>
+            {% endif %}
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn-primary">
+                {% if mode == 'login' %}Sign In{% else %}Sign Up{% endif %}
+            </button>
+        </form>
+
+        <p style="margin-top: 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+            {% if mode == 'login' %}
+            Don't have an account? <a href="{{ url_for('register') }}" style="color: var(--primary);">Sign up</a>
+            {% else %}
+            Already have an account? <a href="{{ url_for('login') }}" style="color: var(--primary);">Login</a>
+            {% endif %}
+        </p>
+    </div>
+</div>
+{% endblock %}

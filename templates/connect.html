@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="glass-card">
+        <h2 style="margin-bottom: 2rem; text-align: center;">Connect {{ platform|capitalize }}</h2>
+
+        <form method="POST" action="">
+            <div class="form-group">
+                <label for="handle">{{ platform|capitalize }} Handle / Username</label>
+                <div style="position: relative;">
+                    <span style="position: absolute; left: 10px; top: 12px; color: var(--text-muted);">@</span>
+                    <input type="text" id="handle" name="handle" class="form-control" style="padding-left: 2rem;"
+                        placeholder="username" required>
+                </div>
+            </div>
+
+            <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                In a real app, this would redirect you to {{ platform|capitalize }}'s OAuth login page to securely
+                authorize access.
+            </p>
+
+            <button type="submit" class="btn-primary">Connect Account</button>
+            <a href="{{ url_for('dashboard') }}"
+                style="display: block; text-align: center; margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
