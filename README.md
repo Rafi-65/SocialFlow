@@ -54,6 +54,3 @@ A premium-designed web application to manage and schedule posts for multiple soc
     -   Choose "Post Now" or "Schedule for Later".
 5.  **Manage**: View your scheduled posts in the feed. Click "Cancel" if you need to stop a scheduled post.
 
-## License
-
-MIT License.
